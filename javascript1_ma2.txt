@@ -1,10 +1,35 @@
 //MODULE ASSIGNMENT 2 - LEVEL 1
 
 1. What is a function literal?
+Function literal is written with 4 different parts,
+
+we have the reserved word function, then we have the second part which is the name of the function (optional).
+Third part is a set of parameters wrapped in parantheses, here you can set from 0 or more prameter names.
+fourth part is a set of statements wrapped inside two curly braces that are run when the function is invoked.
+
 
 2. What is the constructor?
 
+A constructor is a blueprint to create multiple objects of the same type. It takes the object with a set "theme" or "rules" that can be re-used and modified by creating new objects without modifying the original object.
+By using the "new" keyword you create a new instance of the object using the properties of the original object that you can edit, modify or re-use in your new object.
+This is great for use of classes say for instance: 
+
+var Dog = function(name, breed, age){
+	this.name = name,
+	this.breed = breed,
+	this.age = age
+};
+
+var dalmentine = new Dog('Sofia', 'Dalmentine', 2);
+
+
+var pitBull = new Dog('Jon', 'Pit Bull', 5);
+
+
 3. What does the return statement do?
+
+When a function is invoked it returns a value that is set beforehand. if there isnt any value to be returned - javascript returns undefined.
+return can be used to end the function early.
 
 4. What will be written to the console from this function:
 		function myFunction(){
@@ -13,5 +38,11 @@
 		}
 		myFunction();
 
+		inside my function
+
 
 5. Briefly describe scope in JavaScript.
+
+Scope in javascript is when a variable is either global or local. In other words 'where does the variable live'
+In general you should avoid global scoping as it can cause some unexpected behaviour when working with others, or larger script files - as these global scopes can affect another
+part of your project. A variable can be nested through its children but a variable inside a function within a function is only available inside the scope of that function.
