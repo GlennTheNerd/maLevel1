@@ -36,15 +36,18 @@ var dynamicArray = ['Juventus', ' TIL', ' Manchester UTD', ' Liverpool'];
 
 console.log(dynamicArray);
 
+//This prints out the array on the HTML document
 document.getElementById("array").innerHTML = dynamicArray;
 
-document.getElementById("btn").onclick = function() {arraySwitcher()}; 
+// This is the button that changes the array
+document.getElementById("btn").onclick = function() {arraySwitcher()};
 
+// this function does something to the array and switches out the content.
 function arraySwitcher(){
-
     dynamicArray.splice(0, 4, 'Ferrari', ' Mercedes', ' Porsche', ' BMW');
 
     console.log(dynamicArray);
+// This prints out the new array to the HTML document
     return document.getElementById("array").innerHTML = dynamicArray;
 };
 
